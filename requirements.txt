@@ -1,0 +1,6 @@
+flask
+flask_restful
+bcrypt
+pymongo
+gunicorn
+unittest2
