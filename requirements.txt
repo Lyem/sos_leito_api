@@ -1,6 +1,6 @@
 flask
 flask_restful
 bcrypt
-pymongo
+pymongo[srv]
 gunicorn
 unittest2
