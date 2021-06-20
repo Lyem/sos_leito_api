@@ -4,3 +4,4 @@ bcrypt
 pymongo[srv]
 gunicorn
 unittest2
+flask-cors
