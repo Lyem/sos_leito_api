@@ -9,7 +9,7 @@ app = Flask(__name__)
 cors = CORS(app)
 cors = CORS(app, resources={
 	r"/*":{
-		"origins": "*"
+		"origins": "http://127.0.0.1:5500"
 	}
 })
 api = Api(app)
