@@ -7,12 +7,12 @@ from features.register_user.register_user import RegisterUser
 
 app = Flask(__name__)
 cors = CORS(app)
+cors = CORS(app, resources={
+	r"/*":{
+		"origins": "*"
+	}
+})
 api = Api(app)
-
-@app.after_request
-def options (self):
-    return restful.request.form, 201, {'Access-Control-Allow-Origin': '*'} 
-
 
 api.add_resource(On, '/')
 api.add_resource(RegisterHospital, '/register/hospital')
