@@ -9,4 +9,4 @@ class RegisterHospital(Resource):
         hospital = HospitalModel(data)
         db = Db()
         db.insert('hospital', hospital.toJson())
-        return {'status': 'ok'}, {'Access-Control-Allow-Origin': '*'}
+        return {'status': 'ok'}
