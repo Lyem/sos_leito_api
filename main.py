@@ -6,8 +6,8 @@ from features.register_hospital.register_hospital import RegisterHospital
 from features.register_user.register_user import RegisterUser
 
 app = Flask(__name__)
-CORS(app)
 api = Api(app)
+CORS(Api)
 
 api.add_resource(On, '/')
 api.add_resource(RegisterHospital, '/register/hospital')
