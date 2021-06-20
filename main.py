@@ -7,7 +7,7 @@ from features.register_user.register_user import RegisterUser
 
 app = Flask(__name__)
 api = Api(app)
-CORS(Api)
+cors = CORS(api, resources={r"/*": {"origins": "*"}})
 
 api.add_resource(On, '/')
 api.add_resource(RegisterHospital, '/register/hospital')
