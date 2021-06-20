@@ -11,9 +11,7 @@ api = Api(app)
 
 @app.after_request
 def options (self):
-    return {'Allow' : 'POST' }, 200, \
-    { 'Access-Control-Allow-Origin': '*', \
-      'Access-Control-Allow-Methods' : 'PUT,GET,POST' }
+    return restful.request.form, 201, {'Access-Control-Allow-Origin': '*'} 
 
 
 api.add_resource(On, '/')
