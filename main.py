@@ -10,10 +10,11 @@ cors = CORS(app)
 api = Api(app)
 
 @app.after_request
-def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', '*')
-    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
-    return response
+def options (self):
+    return {'Allow' : 'POST' }, 200, \
+    { 'Access-Control-Allow-Origin': '*', \
+      'Access-Control-Allow-Methods' : 'PUT,GET,POST' }
+
 
 api.add_resource(On, '/')
 api.add_resource(RegisterHospital, '/register/hospital')
