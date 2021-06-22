@@ -1,3 +1,4 @@
+from features.login.login import Login
 from flask import Flask
 from flask_restful import Api
 from features.on.on import On
@@ -10,6 +11,7 @@ api = Api(app)
 api.add_resource(On, '/')
 api.add_resource(RegisterHospital, '/register/hospital')
 api.add_resource(RegisterUser, '/register/user')
+api.add_resource(Login, '/login')
 
 if __name__ == '__main__':
     app.run()
