@@ -6,7 +6,8 @@ class GetUsers(Resource):
     def get(self):
         data = request.json
         db = Db()
-        leitos = db.findAll('usuario',data)
+        resposta = db.find('usuario',{"nome": data['nome']})
+        leitos = db.findAll('usuario',resposta['id_hospital'])
         l = []
         for x in leitos:
             l.append(x)
