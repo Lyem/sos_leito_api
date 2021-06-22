@@ -16,6 +16,6 @@ class Login(Resource):
             hospital = retorno['id_hospital']
             print(hospital)
             print(permissao)
-            return {'status': True, 'email': model.user, 'permissao': permissao, 'id_hospital': hospital}
+            return {'status': True, 'email': model.user, 'permissao': permissao, 'id_hospital': str(hospital)}
         else:
             return {'status': False}
