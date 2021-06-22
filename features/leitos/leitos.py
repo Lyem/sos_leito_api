@@ -8,6 +8,7 @@ class Leitos(Resource):
         data = request.json
         db = Db()
         leitos = db.findAll('leitos',data)
+        l = []
         for x in leitos:
-            print(x)
-        return {'status': 'ok'}
+            l.append[x]
+        return {'leitos': l}
