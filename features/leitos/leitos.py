@@ -8,5 +8,6 @@ class Leitos(Resource):
         data = request.json
         db = Db()
         leitos = db.findAll('leitos',data)
-        print(leitos)
+        for x in leitos:
+            print(x)
         return {'status': 'ok'}
