@@ -12,8 +12,6 @@ class Login(Resource):
         data = {'email': model.user}
         retorno = db.find('usuario',data)
         if(bcrypt.hashpw(model.senha.encode('utf-8'), retorno['senha'])==retorno['senha']):
-            return {'status': True}
+            return {'status': True, 'email': retorno['email'], 'permissao': retorno['permissao'], 'id_hospital': retorno['id_hospital']}
         else:
-            return {'status': True}
-
-        
+            return {'status': False}
