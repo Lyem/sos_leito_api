@@ -18,3 +18,6 @@ class Db:
 
     def delete(self,collection, json):
         self.db[collection].delete_one(json)
+    
+    def update(self,collection, json, newjson):
+        self.db[collection].update_one(json, newjson)
