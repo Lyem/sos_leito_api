@@ -12,3 +12,6 @@ class Db:
 
     def find(self, collection, json):
         return self.db[collection].find_one(json)
+    
+    def findAll(self, collection, json):
+        return self.db[collection].find(json)

@@ -8,5 +8,5 @@ class RegisterLeito(Resource):
         data = request.json
         model = leitoModel(data)
         db = Db()
-        db.insert('leitos',{'nome': model.nome,'qtd': model.qtd, 'cnes': model.cnes})
+        db.insert('leitos',{'nome': model.nome,'qtdTotal': model.qtd,'qtd': model.qtd, 'cnes': model.cnes})
         return {'status': 'ok'}
