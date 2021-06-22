@@ -1,3 +1,4 @@
+from features.leitos.leitos import Leitos
 from features.register_leito.register_leito import RegisterLeito
 from features.login.login import Login
 from flask import Flask
@@ -14,6 +15,8 @@ api.add_resource(RegisterHospital, '/register/hospital')
 api.add_resource(RegisterUser, '/register/user')
 api.add_resource(Login, '/login')
 api.add_resource(RegisterLeito, '/register/leito')
+api.add_resource(Leitos, '/leitos')
+
 
 if __name__ == '__main__':
     app.run()
