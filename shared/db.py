@@ -15,3 +15,6 @@ class Db:
     
     def findAll(self, collection, json):
         return self.db[collection].find(json,{"_id": 0})
+
+    def delete(self,collection, json):
+        self.db[collection].delete_one(json)
