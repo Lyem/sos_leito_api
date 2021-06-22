@@ -1,3 +1,4 @@
+from features.getUsers.get_users import GetUsers
 from features.qtdLeito.qtdLeito import setQTD
 from features.deleteLeito.delete_leito import DeleteLeitos
 from features.leitos.leitos import Leitos
@@ -20,6 +21,7 @@ api.add_resource(RegisterLeito, '/register/leito')
 api.add_resource(Leitos, '/leitos')
 api.add_resource(DeleteLeitos, '/delete/leitos')
 api.add_resource(setQTD, '/setqtd')
+api.add_resource(GetUsers, '/getusers')
 
 
 if __name__ == '__main__':
