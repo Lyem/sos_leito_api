@@ -17,7 +17,7 @@ api.add_resource(RegisterUser, '/register/user')
 api.add_resource(Login, '/login')
 api.add_resource(RegisterLeito, '/register/leito')
 api.add_resource(Leitos, '/leitos')
-api.add_resource(DeleteLeitos, '/leitos')
+api.add_resource(DeleteLeitos, '/delete/leitos')
 
 
 if __name__ == '__main__':
