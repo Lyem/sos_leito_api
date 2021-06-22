@@ -10,5 +10,6 @@ class Leitos(Resource):
         leitos = db.findAll('leitos',data)
         l = []
         for x in leitos:
-            l.append[x]
+            json = {"nome": x['nome'], "qtdtotal": x['qtdTotal'], "total": x['qtd'], "cnes": x['cnes']}
+            l.append[json]
         return {'leitos': l}
