@@ -14,4 +14,4 @@ class Db:
         return self.db[collection].find_one(json)
     
     def findAll(self, collection, json):
-        return self.db[collection].find(json)
+        return self.db[collection].find(json,{"_id": 0})

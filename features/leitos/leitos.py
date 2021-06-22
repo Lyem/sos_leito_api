@@ -10,5 +10,5 @@ class Leitos(Resource):
         leitos = db.findAll('leitos',data)
         l = []
         for x in leitos:
-            l.append(str(x))
+            l.append(x)
         return {'leitos': l}
