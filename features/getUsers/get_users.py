@@ -9,5 +9,5 @@ class GetUsers(Resource):
         leitos = db.findAll('usuario',{"cnes": data['cnes']})
         l = []
         for x in leitos:
-            l.append(x)
+            l.append({"nome": x['email'],"permissao":x['permissao'],"cnes": x['cnes']})
         return {'users': l}
