@@ -2,6 +2,7 @@ from features.login.model.user_model import user
 from flask import request
 from flask_restful import Resource
 from shared.db import Db
+import bcrypt
 
 class Login(Resource):
     def post(self):
@@ -10,5 +11,9 @@ class Login(Resource):
         db = Db()
         data = {'email': model.user}
         retorno = db.find('usuario',data)
-        return retorno
+        if(bcrypt.hashpw(model.senha.encode('utf-8'), retorno['senha'])==retorno['senha']):
+            return True
+        else:
+            return False
+
         
