@@ -7,6 +7,6 @@ class Login(Resource):
     def post(self):
         data = request.json
         model = user(data)
-        retorno = Db.find('usuario',{'email': model.user})
+        retorno = Db.find('sos_leito','usuario',{'email': model.user})
         print(retorno)
         
